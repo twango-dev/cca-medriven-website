@@ -4,9 +4,49 @@
     <meta charset="utf-8">
     <title>Hasher</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous"></script>
-    <script src="../assets/js/security.js"
+    <script src="../assets/js/security.js"></script>
+    <link rel="stylesheet" href="../assets/css/hasher.css">
   </head>
-  <body>
-    <h1>JS Hasher/Encrypter</h1>
+  <body onload="hasherOnLoad()">
+    <h1>Hasher/Encrypter (SHA3/SHA-256)</h1>
+    <h4>This hashes and encryptes with <a href="https://twango-dev.github.io/cca-medriven-website/security/keys.json">this</a> specific key.</h3>
+    <form id="hashEncrypt">
+      <input type="text" id="hashEncrypt" placeholder="Raw Input" id="">
+    </form>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Output</th>
+      </tr>
+      <tr>
+        <th>Input</th>
+        <th id="hashEncrypt.input"></th>
+      </tr>
+      <tr>
+        <th>Hash</th>
+        <th id="hashEncrypt.hash"></th>
+      </tr>
+      <tr>
+        <th>Encrypted</th>
+        <th id="hashEncrypt.encryptedHash"></th>
+      </tr>
+    </table>
+    <h1>Hash Decrypter (SHA-256)</h1>
+    <form id="hashDecrypt">
+      <input type="text" id="hashDecrypt" placeholder="Encrypted Input">
+    </form>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Output</th>
+      </tr>
+      <tr>
+        <th>Password</th>
+        <th id="hashDecrypt.input"></th>
+      </tr>
+      <tr>
+        <th>Hash</th>
+        <th id="hashDecrypt.hash"></th>
+    </table>
   </body>
 </html>
